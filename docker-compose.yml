@@ -24,11 +24,10 @@ services:
       - traefik.enable=true
       - traefik.http.routers.dozzle-dozzle.rule=Host(`${DOZZLE_HOSTNAME}`)
       - traefik.http.middlewares.dozzle-auth.basicauth.users=${DOZZLE_USERS}
-      - traefik.http.routers.dozzle-dozzle.middlewares=dozzle-auth@docker
       - traefik.http.middlewares.customheaders.headers.customRequestHeaders.Remote-Email=dhjen@outlook.com
       - traefik.http.middlewares.customheaders.headers.customRequestHeaders.Remote-User=dhjensen
       - traefik.http.middlewares.customheaders.headers.customRequestHeaders.Remote-Name=Daniel Jensen
-      - traefik.http.routers.dozzle-dozzle.middlewares=customheaders@docker
+      - traefik.http.routers.dozzle-dozzle.middlewares=dozzle-auth@docker,customheaders@docker,ipallowlocal@docker
 
 networks:
   nginx-proxy-manager_frontend:
