@@ -27,7 +27,7 @@ services:
       - traefik.http.middlewares.customheaders.headers.customRequestHeaders.Remote-Email=dhjen@outlook.com
       - traefik.http.middlewares.customheaders.headers.customRequestHeaders.Remote-User=dhjensen
       - traefik.http.middlewares.customheaders.headers.customRequestHeaders.Remote-Name=Daniel Jensen
-      - traefik.http.routers.dozzle-dozzle.middlewares=dozzle-auth@docker,customheaders@docker,ipallowlocal@docker
+      - traefik.http.routers.dozzle-dozzle.middlewares=dozzle-auth@docker,customheaders@docker
 
 networks:
   nginx-proxy-manager_frontend:
