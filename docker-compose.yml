@@ -21,7 +21,7 @@ services:
     labels:
       - wud.tag.include=^v\d+\.\d+\.\d+$$
       - traefik.enable=true
-      - traefik.http.routers.dozzle-dozzle.rule=Host(`dozzle-pc.dhjensen.tech`)
+      - traefik.http.routers.dozzle-dozzle.rule=Host(`${DOZZLE_HOSTNAME}`)
       - traefik.http.middlewares.dozzle-auth.basicauth.users=${DOZZLE_USERS}
       - traefik.http.routers.dozzle-dozzle.middlewares=dozzle-auth@docker
 
