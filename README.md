@@ -6,5 +6,7 @@ My docker compose for [Dozzle](https://dozzle.dev/)
 
 ```bash
 DOZZLE_VERSION=version
-DOZZLE_HOSTNAME=hostname
+DOZZLE_HOSTNAME=FQDN
+DOZZLE_USERS=User hashes
+DOZZLE_IPALLOWLIST=IP subnets
 ```
