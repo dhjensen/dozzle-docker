@@ -1,5 +1,7 @@
 # dozzle-docker
 
+I stopped using this so archiving this repo
+
 My docker compose for [Dozzle](https://dozzle.dev/)
 
 ## .env example
